@@ -19,6 +19,9 @@ app.use(express(client/build))
 }
 const port = process.env.PORT || 4000;
 app.listen(port, () => console.log(`Server started on port ${port}`));
+  app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+});
 
 console.log("mongo => ", db)
 mongoose.Promise = global.Promise;
