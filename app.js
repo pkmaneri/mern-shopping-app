@@ -14,7 +14,7 @@ var db = 'mongodb://localhost:27017/mss_db'
 
 
 if (process.env.NODE_ENV === 'production') {
-// app.use(express(client/build))
+app.use(express(client/build))
  
 }
 const port = process.env.PORT || 4000;
